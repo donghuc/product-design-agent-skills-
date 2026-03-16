@@ -9,7 +9,7 @@ A collection of AI Agent skills specifically designed to assist, evaluate, and g
 | **[UX Strategy Guardian](./skills/ux_strategy_guardian)** | Validates UX flows and UI proposals against product strategy, UX principles, and design system rules. | Stable |
 | **[Design System Spec Writer](./skills/design_system_spec_writer)** | Parses Figma data to generate formal UI Specification Guidelines for AI consumption. | Stable |
 | **[UI Design Architect](./skills/ui_design_architect)** | Synthesizes specs and strategy into platform-optimized design briefs and execution prompts. | Stable |
-| **[Heuristic UI Auditor](./skills/heuristic_ui_auditor)** | Codifies the logic of the Heuristic AI Figma plugin for objective, deduction-based UX/UI audits. | New |
+| **[Heuristic UI Auditor](./skills/heuristic_ui_auditor)** | Codifies the logic of the Heuristic AI Figma plugin for objective, deduction-based UX/UI audits. | Stable |
 
 *(More skills coming soon...)*
 
@@ -17,16 +17,17 @@ A collection of AI Agent skills specifically designed to assist, evaluate, and g
 
 To ensure these skills are portable, we have separated the "Visual Extraction" from the "Logic Synthesis":
 - **Design System Spec Writer**: 🔴 **Connection Required.** This is the only skill that needs the Figma MCP server or API access to extract data from your design files.
-- **Other Skills (Architect, Guardian)**: 🟢 **Text-Only.** These skills only process the generated Markdown specifications. They do NOT require any external API connections, making them 100% portable for users without a Figma setup.
+- **Other Skills (Architect, Guardian, Auditor)**: 🟢 **Text-Only.** These skills only process the generated Markdown specifications or JSON node data. They do NOT require any external API connections, making them 100% portable for users without a Figma setup.
 
 ## 🔄 Recommended Workflow
 
 For the best results, use these skills in the following order to create a high-fidelity, strategy-aligned design loop:
 
 1.  **Map the Design System**: Use the **[Design System Spec Writer](./skills/design_system_spec_writer)** with a Figma URL to generate a `ui_spec_artifact`. This serves as the machine-readable "source of truth" for your brand.
-2.  **Architect the UI**: Pass the `ui_spec_artifact` and your `product_foundation` into the **[UI Design Architect](./skills/ui_design_architect)**. It will generate a platform-optimized (mobile-first) design brief and a high-fidelity prompt for builders.
+2.  **Architect the UI**: Pass the `ui_spec_artifact` and your `product_foundation` into the **[UI Design Architect](./skills/ui_design_architect)**. It will generate a platform-optimized (mobile-first) design brief and execution prompt.
 3.  **Build the Component**: Use the output from the Architect to generate the UI using your preferred tool (e.g., Stitch, v0, or manual code).
-4.  **Audit the Result**: Finally, use the **[UX Strategy Guardian](./skills/ux_strategy_guardian)** to review the generated UI. It ensures that the final result perfectly matches your initial strategy and design rules.
+4.  **Audit for Friction**: Run the **[Heuristic UI Auditor](./skills/heuristic_ui_auditor)** on the generated UI to identify accessibility failures, usability friction, and hierarchy issues using objective scoring.
+5.  **Strategic Governance**: Finally, use the **[UX Strategy Guardian](./skills/ux_strategy_guardian)** to perform a final review. It ensures the built component perfectly aligns with your high-level product principles and vision.
 
 ## 🚀 Installation
 
