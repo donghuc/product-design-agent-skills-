@@ -10,14 +10,25 @@ A collection of AI Agent skills specifically designed to assist, evaluate, and g
 
 *(More skills coming soon...)*
 
-## 🚀 How to Use
+## 🚀 Installation
 
-If your agent framework supports file-based skill instructions (like `.agents/skills/`), you can directly copy the relevant skill folders into your project.
+You can install this collection of skills using **npm** directly from GitHub:
 
 ```bash
-# Example: Adding the UX Strategy Guardian skill
-cp -r product-design-agent-skills/skills/ux_strategy_guardian /path/to/your/project/.agents/skills/
+npm install git+https://github.com/donghuc/product-design-agent-skills-.git
 ```
+
+### Usage After Installation
+
+Once installed, the skills will be located in your `node_modules/@donghuc/product-design-agent-skills/skills/`. 
+
+You can then copy them to your agent's skills directory:
+
+```bash
+cp -r node_modules/@donghuc/product-design-agent-skills/skills/ux_strategy_guardian /path/to/your/project/.agents/skills/
+```
+
+## 📂 Manual Installation
 
 Inside each skill's folder, you will find:
 - A `SKILL.md` containing the core agent prompt/instructions and YAML metadata.
