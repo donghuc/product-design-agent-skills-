@@ -9,6 +9,10 @@ The UI Design Architect is the "Synthesizer" of the design workflow. While the *
 
 It takes your high-level ideas, filters them through your UX Strategy, and skins them using your UI Specification to create a perfect, platform-optimized design brief.
 
+> [!TIP]
+> This skill **does not require Figma access**. It only needs the text-based UI Specification produced by the Spec Writer (or manually provided). This makes it portable and easy to use even if you don't have a live design system connection.
+
+
 ## When to Trigger
 
 Trigger this skill when you are ready to:

@@ -9,6 +9,10 @@ The Design System Spec Writer is an agent skill that converts raw Figma design d
 
 By running this skill on a design system file, you create a dedicated document that defines the boundaries and rules for all future design and development work in the project.
 
+> [!NOTE]
+> This is the **only skill** in the package that requires a live connection to the Figma API or a Figma MCP server. All other skills in the workflow operate on the text-based guidelines produced by this skill.
+
+
 ## When to Trigger
 
 Trigger this skill when:

@@ -12,6 +12,12 @@ A collection of AI Agent skills specifically designed to assist, evaluate, and g
 
 *(More skills coming soon...)*
 
+## 🔑 Figma & MCP Dependencies
+
+To ensure these skills are portable, we have separated the "Visual Extraction" from the "Logic Synthesis":
+- **Design System Spec Writer**: 🔴 **Connection Required.** This is the only skill that needs the Figma MCP server or API access to extract data from your design files.
+- **Other Skills (Architect, Guardian)**: 🟢 **Text-Only.** These skills only process the generated Markdown specifications. They do NOT require any external API connections, making them 100% portable for users without a Figma setup.
+
 ## 🔄 Recommended Workflow
 
 For the best results, use these skills in the following order to create a high-fidelity, strategy-aligned design loop:
