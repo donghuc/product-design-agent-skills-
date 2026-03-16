@@ -12,6 +12,15 @@ A collection of AI Agent skills specifically designed to assist, evaluate, and g
 
 *(More skills coming soon...)*
 
+## 🔄 Recommended Workflow
+
+For the best results, use these skills in the following order to create a high-fidelity, strategy-aligned design loop:
+
+1.  **Map the Design System**: Use the **[Design System Spec Writer](./skills/design_system_spec_writer)** with a Figma URL to generate a `ui_spec_artifact`. This serves as the machine-readable "source of truth" for your brand.
+2.  **Architect the UI**: Pass the `ui_spec_artifact` and your `product_foundation` into the **[UI Design Architect](./skills/ui_design_architect)**. It will generate a platform-optimized (mobile-first) design brief and a high-fidelity prompt for builders.
+3.  **Build the Component**: Use the output from the Architect to generate the UI using your preferred tool (e.g., Stitch, v0, or manual code).
+4.  **Audit the Result**: Finally, use the **[UX Strategy Guardian](./skills/ux_strategy_guardian)** to review the generated UI. It ensures that the final result perfectly matches your initial strategy and design rules.
+
 ## 🚀 Installation
 
 You can install this collection of skills using **npm** directly from GitHub:
