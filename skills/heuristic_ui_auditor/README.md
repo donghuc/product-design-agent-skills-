@@ -2,13 +2,15 @@
 
 **ID:** `heuristic_ui_auditor`
 **Category:** Quality Assurance & Governance
-**V3.1 Implementation**
 
 ## Overview
 
 The Heuristic UI Auditor is a high-performance auditing skill that codifies the logic of the **Heuristic AI** Figma plugin. It acts as a Senior UX Specialist to find friction and accessibility failures before a design is handed off to production.
 
-## Features (V3.1 Core)
+> [!TIP]
+> This skill is based on the [Heuristic AI Figma Plugin](https://www.figma.com/community/plugin/1611243044519322138/ai-ux-audit-auto-review).
+
+## Features
 
 - **4-Pillar Analysis**: Simultaneously audits for Nielsen's Heuristics, WCAG 2.1 AA (Contrast/Touch Targets), Copy Clarity, and Visual Hierarchy.
 - **Scoring Engine**: Provides a deterministic score from 0-100 based on weighted deductions.
@@ -16,9 +18,9 @@ The Heuristic UI Auditor is a high-performance auditing skill that codifies the 
 - **Figma Context**: Understands the difference between local variables, instances, and semantic layer names.
 - **Custom Focus**: Can be told to prioritize specific personas (e.g., "Audit for accessibility for color-blind users").
 
-## Comparison: V3.1 Logic vs. Generic AI
+## Comparison: Heuristic UI Auditor vs. Generic AI
 
-| Feature | Heuristic UI Auditor (V3.1) | Generic AI Prompt |
+| Feature | Heuristic UI Auditor | Generic AI Prompt |
 | :--- | :--- | :--- |
 | **Logic** | Weighted Deduction Model | Subjective opinion |
 | **Contrast** | Deterministic 4.5:1 ratio check | "Looks dark enough" |
