@@ -7,7 +7,8 @@ A collection of AI Agent skills specifically designed to assist, evaluate, and g
 | Skill Name | Description | Status |
 | :--- | :--- | :--- |
 | **[UX Strategy Guardian](./skills/ux_strategy_guardian)** | Validates UX flows and UI proposals against product strategy, UX principles, and design system rules. | Stable |
-| **[Design System Spec Writer](./skills/design_system_spec_writer)** | Parses Figma data to generate formal UI Specification Guidelines for AI consumption. | New |
+| **[Design System Spec Writer](./skills/design_system_spec_writer)** | Parses Figma data to generate formal UI Specification Guidelines for AI consumption. | Stable |
+| **[UI Design Architect](./skills/ui_design_architect)** | Synthesizes specs and strategy into platform-optimized design briefs and execution prompts. | New |
 
 *(More skills coming soon...)*
 
