@@ -7,9 +7,10 @@ A collection of AI Agent skills specifically designed to assist, evaluate, and g
 | Skill Name | Description | Status |
 | :--- | :--- | :--- |
 | **[Problem Framing Orchestrator](./skills/problem_framing_orchestrator)** | Interactive agent that structures and validates problem framing before any design begins. | Stable |
-| **[Concept Exploration Orchestrator](./skills/concept_exploration_orchestrator)** | Helps product designers explore and evaluate multiple solution directions before defining flows. | New |
+| **[Concept Exploration Orchestrator](./skills/concept_exploration_orchestrator)** | Helps product designers explore and evaluate multiple solution directions before defining flows. | Stable |
 | **[Product Spec Strategist](./skills/product_spec_strategist)** | Converts raw specs into actionable design roadmaps, suggests UX flows, and identifies edge cases. | Stable |
 | **[UX Strategy Guardian](./skills/ux_strategy_guardian)** | MCP-Enhanced validator that audits Figma node structures, components, and strategy alignment. | Stable |
+| **[Validation & Simulation Agent](./skills/validation_simulation_agent)** | Conducts persona-driven behavioral simulations and scenario stress testing of your UX. | New |
 | **[Design System Spec Writer](./skills/design_system_spec_writer)** | Parses Figma data to generate formal UI Specification Guidelines for AI consumption. | Stable |
 | **[UI Design Architect](./skills/ui_design_architect)** | Adaptive dual-mode architect for Phase 3 (Rapid Prototyping) and Phase 4 (Spec-Compliant Design). | Stable |
 | **[Heuristic UI Auditor](./skills/heuristic_ui_auditor)** | Codifies the logic of the Heuristic AI Figma plugin for objective, deduction-based UX/UI audits. | Stable |
@@ -20,7 +21,7 @@ A collection of AI Agent skills specifically designed to assist, evaluate, and g
 
 To ensure these skills are portable, we have separated the "Visual Extraction" from the "Logic Synthesis":
 - **Design System Spec Writer**: 🔴 **Connection Required.** This is the only skill that needs the Figma MCP server or API access to extract data from your design files.
-- **Other Skills (Orchestrator, Strategist, Architect, Guardian, Auditor)**: 🟢 **Text-Only.** These skills only process the generated Markdown specifications or JSON node data. They do NOT require any external API connections, making them 100% portable for users without a Figma setup.
+- **Other Skills (Orchestrator, Strategist, Architect, Guardian, Auditor, Validation Agent)**: 🟢 **Text-Only.** These skills only process the generated Markdown specifications or JSON node data. They do NOT require any external API connections, making them 100% portable for users without a Figma setup.
 
 ## 🔄 Recommended Workflow
 
@@ -33,7 +34,7 @@ For the best results, use these skills in the following order to create a high-f
 5.  **Architect the UI**: Pass the chosen UX flow and the `ui_spec_artifact` into the **[UI Design Architect](./skills/ui_design_architect)** to generate an execution prompt.
 6.  **Build the Component**: Use the Architect's output to generate the UI using your preferred tool (e.g., Stitch, v0, or manual code).
 7.  **Audit for Friction**: Run the **[Heuristic UI Auditor](./skills/heuristic_ui_auditor)** to identify accessibility and usability issues.
-8.  **Strategic Governance**: Finally, use the **[UX Strategy Guardian](./skills/ux_strategy_guardian)** to ensure the build aligns perfectly with your high-level principles.
+8.  **Strategic Shield & Validation**: Finally, use the **[UX Strategy Guardian](./skills/ux_strategy_guardian)** and the **[Validation & Simulation Agent](./skills/validation_simulation_agent)** to ensure the final build aligns with your strategy and is robust against all user behaviors.
 
 ## 🚀 Installation
 
