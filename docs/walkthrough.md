@@ -1,6 +1,17 @@
 # Product Design Agent Skills: Detailed Walkthrough
 
-This guide provides a comprehensive breakdown of the 13 skills in the v2.0 Anti-Hallucination Suite. It is designed to help Product Designers and AI Agents collaborate effectively across the 5-phase Product Design Cycle, ensuring that AI operates safely without generating "confident nonsense".
+This guide provides a comprehensive breakdown of the 14 skills in the v2.0 Anti-Hallucination Suite. It is designed to help Product Designers and AI Agents collaborate effectively across the 5-phase Product Design Cycle, ensuring that AI operates safely without generating "confident nonsense".
+
+---
+
+## Phase 0: Global Orchestration
+*Goal: Manage the project timeline and route work to specialized skills.*
+
+### 0. Product Design Workflow Orchestrator
+- **What it does**: Acts as a Project Manager or "Meta-Agent." It tracks what phase you are in, tells you which specialized skill you need to use next, and ensures you pass the `skill_handoff_schema.json` correctly. It does NOT do design work.
+- **When Agent Activates**: At the beginning of a brand-new project, or when you are lost and need to know the "Next Step."
+- **When Designer Should Use**: Ping this skill whenever you finish a phase (e.g., "I just finished Rapid Prototyping. What's next?"). 
+- **Pro Tip**: Do not ask this agent to summarize your entire project history from memory, as that invites hallucination. Pass it the JSON handoff file instead.
 
 ---
 
