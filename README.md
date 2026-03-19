@@ -9,7 +9,7 @@ A collection of AI Agent skills specifically designed to assist, evaluate, and g
 | **[Problem Framing Orchestrator](./skills/problem_framing_orchestrator)** | Interactive agent that structures and validates problem framing before any design begins. | Stable |
 | **[Concept Exploration Orchestrator](./skills/concept_exploration_orchestrator)** | Helps product designers explore and evaluate multiple solution directions before defining flows. | New |
 | **[Product Spec Strategist](./skills/product_spec_strategist)** | Converts raw specs into actionable design roadmaps, suggests UX flows, and identifies edge cases. | Stable |
-| **[UX Strategy Guardian](./skills/ux_strategy_guardian)** | Validates UX flows and UI proposals against product strategy, UX principles, and design system rules. | Stable |
+| **[UX Strategy Guardian](./skills/ux_strategy_guardian)** | MCP-Enhanced validator that audits Figma node structures, components, and strategy alignment. | Stable |
 | **[Design System Spec Writer](./skills/design_system_spec_writer)** | Parses Figma data to generate formal UI Specification Guidelines for AI consumption. | Stable |
 | **[UI Design Architect](./skills/ui_design_architect)** | Adaptive dual-mode architect for Phase 3 (Rapid Prototyping) and Phase 4 (Spec-Compliant Design). | Stable |
 | **[Heuristic UI Auditor](./skills/heuristic_ui_auditor)** | Codifies the logic of the Heuristic AI Figma plugin for objective, deduction-based UX/UI audits. | Stable |
