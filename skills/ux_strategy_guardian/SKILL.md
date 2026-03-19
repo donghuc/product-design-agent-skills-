@@ -47,8 +47,11 @@ Inspect component names and library references.
 ### STEP 6: State Completeness
 - Audit for mandatory states: **Loading, Error, Empty, Success**. Flag missing states.
 
+### STEP 6.5: Cross-Screen Consistency
+- When auditing a multi-screen flow, compare the usage of the same component type across all screens. Flag any navigation or error handling inconsistencies.
+
 ### STEP 7: UX / Strategy / Privacy Validation
-- Perform standard strategic alignment and privacy risk detection.
+- Perform standard strategic alignment and privacy risk detection. If `previous_audit_id` is provided, state tracking diff (resolved vs new issues).
 
 ---
 
