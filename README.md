@@ -6,7 +6,8 @@ A collection of AI Agent skills specifically designed to assist, evaluate, and g
 
 | Skill Name | Description | Status |
 | :--- | :--- | :--- |
-| **[Problem Framing Orchestrator](./skills/problem_framing_orchestrator)** | Interactive agent that structures and validates problem framing before any design begins. | New |
+| **[Problem Framing Orchestrator](./skills/problem_framing_orchestrator)** | Interactive agent that structures and validates problem framing before any design begins. | Stable |
+| **[Concept Exploration Orchestrator](./skills/concept_exploration_orchestrator)** | Helps product designers explore and evaluate multiple solution directions before defining flows. | New |
 | **[Product Spec Strategist](./skills/product_spec_strategist)** | Converts raw specs into actionable design roadmaps, suggests UX flows, and identifies edge cases. | Stable |
 | **[UX Strategy Guardian](./skills/ux_strategy_guardian)** | Validates UX flows and UI proposals against product strategy, UX principles, and design system rules. | Stable |
 | **[Design System Spec Writer](./skills/design_system_spec_writer)** | Parses Figma data to generate formal UI Specification Guidelines for AI consumption. | Stable |
@@ -26,12 +27,13 @@ To ensure these skills are portable, we have separated the "Visual Extraction" f
 For the best results, use these skills in the following order to create a high-fidelity, strategy-aligned design loop:
 
 1.  **Frame the Problem**: Use the **[Problem Framing Orchestrator](./skills/problem_framing_orchestrator)** to interactively define and validate the "Why" and "Who" before any specs exist.
-2.  **Strategize the Feature**: Use the **[Product Spec Strategist](./skills/product_spec_strategist)** to turn the framed problem into an actionable design brief with 3 UX flow options.
-3.  **Map the Design System**: Use the **[Design System Spec Writer](./skills/design_system_spec_writer)** with a Figma URL to generate a `ui_spec_artifact`.
-4.  **Architect the UI**: Pass the chosen UX flow and the `ui_spec_artifact` into the **[UI Design Architect](./skills/ui_design_architect)** to generate an execution prompt.
-5.  **Build the Component**: Use the Architect's output to generate the UI using your preferred tool (e.g., Stitch, v0, or manual code).
-6.  **Audit for Friction**: Run the **[Heuristic UI Auditor](./skills/heuristic_ui_auditor)** to identify accessibility and usability issues.
-7.  **Strategic Governance**: Finally, use the **[UX Strategy Guardian](./skills/ux_strategy_guardian)** to ensure the build aligns perfectly with your high-level principles.
+2.  **Explore Concepts**: Use the **[Concept Exploration Orchestrator](./skills/concept_exploration_orchestrator)** to evaluate several solution directions and trade-offs before committing to a path.
+3.  **Strategize the Feature**: Use the **[Product Spec Strategist](./skills/product_spec_strategist)** to turn the framed problem into an actionable design brief with 3 UX flow options.
+4.  **Map the Design System**: Use the **[Design System Spec Writer](./skills/design_system_spec_writer)** with a Figma URL to generate a `ui_spec_artifact`.
+5.  **Architect the UI**: Pass the chosen UX flow and the `ui_spec_artifact` into the **[UI Design Architect](./skills/ui_design_architect)** to generate an execution prompt.
+6.  **Build the Component**: Use the Architect's output to generate the UI using your preferred tool (e.g., Stitch, v0, or manual code).
+7.  **Audit for Friction**: Run the **[Heuristic UI Auditor](./skills/heuristic_ui_auditor)** to identify accessibility and usability issues.
+8.  **Strategic Governance**: Finally, use the **[UX Strategy Guardian](./skills/ux_strategy_guardian)** to ensure the build aligns perfectly with your high-level principles.
 
 ## 🚀 Installation
 
