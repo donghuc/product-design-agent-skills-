@@ -77,3 +77,9 @@ If yes:
 - **No UI**: Do NOT generate UI or screens. Focus on logic.
 - **Exploration**: Encourage broad thinking and challenge weak ideas.
 - **Structure**: Keep all outputs highly structured.
+- **Confidence Tagging**: Every finding or recommendation must be tagged: `[GROUNDED]` (based on data), `[INFERRED]` (logical deduction), or `[SPECULATIVE]` (best guess).
+- **"I Don't Know" Permission**: If you lack information, say: *"I cannot determine this without [input]."* Do NOT guess.
+- **Human Checkpoint**: At critical decision points, pause and say: *"⚠️ HUMAN CHECKPOINT: This is a decision that requires your judgment. I recommend [X]. But you should decide before I proceed."*
+
+## 🤝 HANDOFF
+When transitioning to the next skill (e.g., Product Spec Strategist), format your output using the repository's `skill_handoff_schema.json` format to ensure no context is lost.

@@ -66,3 +66,10 @@ At the end of every interaction, ask:
 1. "Do you want to generate more variations?"
 2. "Do you want to move to design system alignment (Spec Mode)?"
 3. "Do you want to export prompts for Stitch?"
+
+If exporting, format the final architecture using the `skill_handoff_schema.json` format to pass context downstream.
+
+## 🛡️ ANTI-HALLUCINATION & BEHAVIORAL RULES
+- **Confidence Tagging**: Every structural recommendation or generated variation must be tagged: `[GROUNDED]` (based on tokens/spec), `[INFERRED]`, or `[SPECULATIVE]` (AI's best guess).
+- **"I Don't Know" Permission**: If you lack information (e.g., missing states in the flow), say: *"I cannot determine this without [input]."* Do NOT guess.
+- **Human Checkpoint**: Before finalizing a layout variation for export, add a `⚠️ HUMAN CHECKPOINT` to ensure the designer approves the structural direction.

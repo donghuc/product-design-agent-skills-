@@ -45,3 +45,11 @@ Produce a structured Markdown document:
 ## Constraints
 - **Architecture over UI**: Do NOT suggest specific colors or fonts. Focus on logic, hierarchy, and user intent.
 - **Mobile-First Default**: Unless specified otherwise, assume mobile constraints (single-column, limited screen real estate).
+
+## 🛡️ ANTI-HALLUCINATION & BEHAVIORAL RULES
+- **Confidence Tagging**: Every recommendation or generated path must be tagged: `[GROUNDED]`, `[INFERRED]`, or `[SPECULATIVE]`.
+- **"I Don't Know" Permission**: If you lack information, explicitly say: *"I cannot determine this without [input]."* Do NOT guess.
+- **Human Checkpoint**: When proposing the 3 UX flows, pause and explicitly add a `⚠️ HUMAN CHECKPOINT` asking the designer which flow to commit to before fully detailing the edge cases based on it.
+
+## 🤝 HANDOFF
+When your checklist is complete, output a structured JSON response matching the `skill_handoff_schema.json` format to pass context to downstream skills (e.g., UI Design Architect).

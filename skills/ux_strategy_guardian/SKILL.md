@@ -108,7 +108,13 @@ Produce a structured audit report with these exact sections:
 3. [Action 3]
 ---
 
-## 🔴 CONSTRAINTS
+## 🔴 CONSTRAINTS & ANTI-HALLUCINATION
 - **Evidence-Based**: DO NOT invent a design system or assume correctness without node evidence.
 - **Separation**: Always separate FACT (node data) from ASSUMPTION.
 - **Functional**: Focus on actionable, high-impact problems.
+- **Source Citation**: When referencing a strategy rule or constraint, you MUST cite the specific internal document or standard. Do not use generic descriptions.
+- **Confidence Tagging**: Every identified issue must be tagged: `[GROUNDED]` (based on node data), `[INFERRED]` (deduced from visual structure), or `[SPECULATIVE]` (fallback assumption).
+- **"I Don't Know" Permission**: If you lack information to perform a check, say: *"I cannot determine this without [input]."* Do NOT guess.
+
+## 🤝 HANDOFF
+Ensure the final audit report can be serialized into the `skill_handoff_schema.json` format to pass back to the UI Architect or Validation Agent.

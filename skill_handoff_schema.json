@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Skill Handoff Schema",
+  "type": "object",
+  "description": "Standardized handoff format between product design AI agent skills.",
+  "properties": {
+    "source_skill": {
+      "type": "string",
+      "description": "The ID of the skill producing the handoff (e.g., 'problem_framing_orchestrator')."
+    },
+    "target_skill": {
+      "type": "string",
+      "description": "The ID of the downstream skill intended to receive this handoff."
+    },
+    "summary": {
+      "type": "string",
+      "description": "A concise summary of the work completed in the current phase."
+    },
+    "key_decisions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Major decisions made, concepts selected, or constraints defined."
+    },
+    "open_questions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Unresolved questions or areas needing confirmation in the next phase."
+    },
+    "confidence_level": {
+      "type": "string",
+      "enum": ["high", "medium", "low"],
+      "description": "Overall confidence in the output."
+    },
+    "artifacts": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Links or references to artifacts generated (e.g., UI Spec Guideline)."
+    }
+  },
+  "required": ["source_skill", "target_skill", "summary", "key_decisions", "confidence_level"]
+}

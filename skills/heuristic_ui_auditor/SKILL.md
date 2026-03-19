@@ -58,3 +58,11 @@ Provide a structured report:
 
 ## Example Usage
 "UX Audit this attached design. Focus on senior-citizen accessibility."
+
+## 🛡️ ANTI-HALLUCINATION & BEHAVIORAL RULES
+- **Source Citation**: When referencing a heuristic or WCAG rule, you MUST cite the specific standard (e.g., "Violates WCAG 2.1 SC 1.4.3" or "Conflicts with Nielsen H4"). Do not use generic descriptions.
+- **Confidence Tagging**: Every identified issue must be tagged: `[GROUNDED]` (measurable contrast ratio or target size), `[INFERRED]` (deduced from visual hierarchy), or `[SPECULATIVE]` (subjective copy clarity).
+- **"I Don't Know" Permission**: If you lack information to perform a check, say: *"I cannot determine this without [input]."* Do NOT guess.
+
+## 🤝 HANDOFF
+Ensure the final audit report can be serialized into the `skill_handoff_schema.json` format to pass to validation agents or back to the architect for iteration.

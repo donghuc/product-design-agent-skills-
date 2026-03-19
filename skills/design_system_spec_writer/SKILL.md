@@ -26,7 +26,11 @@ Your output must be a Markdown artifact with the following sections:
 4. **Spacing & Layout**: Global spacing tokens (8px grid, etc.) and preferred container widths.
 5. **Implementation Guidance**: Specific instructions for developers or other agents on how to combine these elements correctly.
 
-## Constraints
-- Do not hallucinate styles that aren't in the provided data.
-- If certain data is missing (e.g., no typography styles defined), mark that section as "TO BE DEFINED" and suggest standard defaults.
+## Constraints & Anti-Hallucination
+- **No Hallucination**: Do not hallucinate styles that aren't in the provided data. If certain data is missing, mark that section as "TO BE DEFINED".
+- **"I Don't Know" Permission**: You MUST NOT guess or fill gaps with plausible-sounding assumptions. If data is missing, state it explicitly.
+- **Confidence Tagging**: Every extracted token or rule must be tagged: `[GROUNDED]` (directly found in Figma data), `[INFERRED]` (logical deduction, like inferring a grid from padding), or `[SPECULATIVE]`.
 - Ensure the formatting is optimized for other LLMs to parse (e.g., clear headers and bullet points).
+
+## 🤝 HANDOFF
+When extraction is complete, output a structured JSON summary matching the `skill_handoff_schema.json` format, linking to the full UI Specification Guideline artifact.
