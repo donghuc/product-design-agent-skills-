@@ -1,74 +1,77 @@
-# Product Design Agent Skills
+# Product Design Agent Skills (End-to-End Suite)
 
-A collection of AI Agent skills specifically designed to assist, evaluate, and govern product design workflows. These skills are intended for multi-agent systems where agents specialize in UX research, UI generation, and strategic alignment.
+A collection of specialized AI Agent skills designed to support, evaluate, and govern the modern **Product Design Cycle**. These skills turn generic LLMs into domain experts for UX research, UI architecture, and strategic governance.
 
-## 📦 Available Skills
+---
 
-| Skill Name | Description | Status |
-| :--- | :--- | :--- |
-| **[Problem Framing Orchestrator](./skills/problem_framing_orchestrator)** | Interactive agent that structures and validates problem framing before any design begins. | Stable |
-| **[Concept Exploration Orchestrator](./skills/concept_exploration_orchestrator)** | Helps product designers explore and evaluate multiple solution directions before defining flows. | Stable |
-| **[Product Spec Strategist](./skills/product_spec_strategist)** | Converts raw specs into actionable design roadmaps, suggests UX flows, and identifies edge cases. | Stable |
-| **[UX Strategy Guardian](./skills/ux_strategy_guardian)** | MCP-Enhanced validator that audits Figma node structures, components, and strategy alignment. | Stable |
-| **[Validation & Simulation Agent](./skills/validation_simulation_agent)** | Conducts persona-driven behavioral simulations and scenario stress testing of your UX. | New |
-| **[Design System Spec Writer](./skills/design_system_spec_writer)** | Parses Figma data to generate formal UI Specification Guidelines for AI consumption. | Stable |
-| **[UI Design Architect](./skills/ui_design_architect)** | Adaptive dual-mode architect for Phase 3 (Rapid Prototyping) and Phase 4 (Spec-Compliant Design). | Stable |
-| **[Heuristic UI Auditor](./skills/heuristic_ui_auditor)** | Codifies the logic of the Heuristic AI Figma plugin for objective, deduction-based UX/UI audits. | Stable |
+## 🔄 The 5-Phase Product Design Cycle
 
-*(More skills coming soon...)*
+Our skills are structured to follow a rigorous design workflow, ensuring that strategy and user-centric logic drive every visual decision.
+
+### Phase 1: Problem Framing
+**Role**: Product Strategist / UX Lead
+- **[Problem Framing Orchestrator](./skills/problem_framing_orchestrator)**: **Interactive Absolute Step 0.** Defines the "Why" and "Who" before any specs or roadmap exist. Challenges vague thinking and aligns problems with product strategy.
+
+### Phase 2: Idea Exploration
+**Role**: Product Designer / UX Strategist
+- **[Concept Exploration Orchestrator](./skills/concept_exploration_orchestrator)**: **Solution Triangulation.** Explores 3-5 distinct interaction concepts and evaluates them against core principles and trade-offs before committing to a path.
+
+### Phase 3: Rapid Prototyping
+**Role**: Interaction Designer / PM / UX Architect
+- **[Product Spec Strategist](./skills/product_spec_strategist)**: **Roadmap Generator.** Converts chosen concepts into a 3-flow design roadmap (Happy/Power/Guided) with actionable checklists.
+- **[UI Design Architect](./skills/ui_design_architect)**: **Adaptive Planner.** Used in *Prototyping Mode* to fast-map screens, variations, and mandatory interaction states (Loading, Error, Empty, Success).
+
+### Phase 4: Design System Application
+**Role**: Design Ops / UI Designer
+- **[Design System Spec Writer](./skills/design_system_spec_writer)**: **Figma Translator.** Parses raw Figma files via MCP to generate machine-readable UI Guideline artifacts (tokens, spacing, components).
+- **[UI Design Architect](./skills/ui_design_architect)**: **adaptive Planner.** Used in *Spec-Compliant Mode* to skin layouts with 100% adherence to Design System tokens.
+
+### Phase 5: Validation & Review
+**Role**: Design Director / Auditor / Validation Lead
+- **[Heuristic UI Auditor](./skills/heuristic_ui_auditor)**: **Self-Correction Layer.** Performs objective, 0-100 scored audits based on Nielsen’s 10 Heuristics and WCAG 2.1 accessibility.
+- **[UX Strategy Guardian](./skills/ux_strategy_guardian)**: **MCP-Enhanced Gatekeeper.** Inspects actual Figma node structures to detect detached instances, semantic variant errors, and strategic drift.
+- **[Validation & Simulation Agent](./skills/validation_simulation_agent)**: **Behavioral Stress Test.** Simulates specific user personas (Impatient, First-time, etc.) to detect friction and hidden failure points.
+
+---
 
 ## 🔑 Figma & MCP Dependencies
 
-To ensure these skills are portable, we have separated the "Visual Extraction" from the "Logic Synthesis":
-- **Design System Spec Writer**: 🔴 **Connection Required.** This is the only skill that needs the Figma MCP server or API access to extract data from your design files.
-- **Other Skills (Orchestrator, Strategist, Architect, Guardian, Auditor, Validation Agent)**: 🟢 **Text-Only.** These skills only process the generated Markdown specifications or JSON node data. They do NOT require any external API connections, making them 100% portable for users without a Figma setup.
+To ensure maximum portability, we separate "Visual Extraction" from "Logic Synthesis":
+- **Design System Spec Writer**: 🔴 **Connection Required.** Needs Figma MCP or API to extract live data.
+- **Other Skills (Orchestrator, Strategist, Architect, Guardian, Auditor, Validation Agent)**: 🟢 **Text-Only.** These process Markdown specs or JSON node data. They are 100% portable and do not require external connections.
 
-## 🔄 Recommended Workflow
-
-For the best results, use these skills in the following order to create a high-fidelity, strategy-aligned design loop:
-
-1.  **Frame the Problem**: Use the **[Problem Framing Orchestrator](./skills/problem_framing_orchestrator)** to interactively define and validate the "Why" and "Who" before any specs exist.
-2.  **Explore Concepts**: Use the **[Concept Exploration Orchestrator](./skills/concept_exploration_orchestrator)** to evaluate several solution directions and trade-offs before committing to a path.
-3.  **Strategize the Feature**: Use the **[Product Spec Strategist](./skills/product_spec_strategist)** to turn the framed problem into an actionable design brief with 3 UX flow options.
-4.  **Map the Design System**: Use the **[Design System Spec Writer](./skills/design_system_spec_writer)** with a Figma URL to generate a `ui_spec_artifact`.
-5.  **Architect the UI**: Pass the chosen UX flow and the `ui_spec_artifact` into the **[UI Design Architect](./skills/ui_design_architect)** to generate an execution prompt.
-6.  **Build the Component**: Use the Architect's output to generate the UI using your preferred tool (e.g., Stitch, v0, or manual code).
-7.  **Audit for Friction**: Run the **[Heuristic UI Auditor](./skills/heuristic_ui_auditor)** to identify accessibility and usability issues.
-8.  **Strategic Shield & Validation**: Finally, use the **[UX Strategy Guardian](./skills/ux_strategy_guardian)** and the **[Validation & Simulation Agent](./skills/validation_simulation_agent)** to ensure the final build aligns with your strategy and is robust against all user behaviors.
+---
 
 ## 🚀 Installation
 
-You can install this collection of skills using **npm** directly from GitHub:
+Install this collection using **npm** directly from GitHub:
 
 ```bash
 npm install git+https://github.com/donghuc/product-design-agent-skills-.git
 ```
 
 ### Usage After Installation
-
-Once installed, the skills will be located in your `node_modules/@donghuc/product-design-agent-skills/skills/`. 
-
-You can then copy them to your agent's skills directory:
+Skills are located in `node_modules/@donghuc/product-design-agent-skills/skills/`. To use them in your own agent workflow:
 
 ```bash
-cp -r node_modules/@donghuc/product-design-agent-skills/skills/ux_strategy_guardian /path/to/your/project/.agents/skills/
+cp -r node_modules/@donghuc/product-design-agent-skills/skills/ui_design_architect /path/to/project/.agents/skills/
 ```
 
-## 📂 Manual Installation
+---
 
-Inside each skill's folder, you will find:
-- A `SKILL.md` containing the core agent prompt/instructions and YAML metadata.
-- A `README.md` detailing the inputs, behaviors, and expected outputs.
-- An `examples/` folder showing concrete JSON payloads.
+## 📂 Repository Structure
+Each skill folder contains:
+- `SKILL.md`: The core system instructions and YAML metadata for the agent.
+- `README.md`: Input/Output schema and usage guidance.
+- `examples/`: Concrete JSON payloads for testing and reference.
+
+---
 
 ## 🤝 Contributing
-
-We welcome additions! To submit a new skill:
-1. Fork the repository.
-2. Create a new folder under `skills/` (using snake_case).
-3. Ensure you include a `SKILL.md`, a `README.md`, and an `examples/` directory.
-4. Submit a Pull Request.
+We welcome new specialized design skills! 
+1. Create a snake_case folder under `skills/`.
+2. Include a `SKILL.md`, `README.md`, and `examples/` directory.
+3. Submit a Pull Request.
 
 ## 📄 License
-
-MIT License. See `LICENSE` for details.
+MIT License.
