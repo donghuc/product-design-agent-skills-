@@ -1,5 +1,4 @@
-# Product Design Agent Skills (v2.0: Anti-Hallucination Suite)
-
+# Product Design Agent Skills
 A collection of specialized AI Agent skills designed to support, evaluate, and govern the modern **Product Design Cycle**. These skills turn generic LLMs into domain experts for UX research, UI architecture, and strategic governance.
 
 📚 **[Read the Detailed Library Walkthrough](./docs/walkthrough.md)** - A complete guide on how and when to use each of the 13 skills in your daily design process.
