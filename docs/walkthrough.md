@@ -1,6 +1,6 @@
 # Product Design Agent Skills: Detailed Walkthrough
 
-This guide provides a comprehensive breakdown of the 14 skills in the v2.0 Anti-Hallucination Suite. It is designed to help Product Designers and AI Agents collaborate effectively across the 5-phase Product Design Cycle, ensuring that AI operates safely without generating "confident nonsense".
+This guide provides a comprehensive breakdown of the 15 skills in the Anti-Hallucination Suite. It is designed to help Product Designers and AI Agents collaborate effectively across the 5-phase Product Design Cycle, ensuring that AI operates safely without generating "confident nonsense".
 
 ---
 
@@ -87,11 +87,17 @@ This guide provides a comprehensive breakdown of the 14 skills in the v2.0 Anti-
 - **When Designer Should Use**: When you want an external build tool (like Stitch) to generate code that looks exactly like your brand, not a generic template.
 - **Pro Tip**: Never run this mode without first running the Spec Writer, or the AI will guess your brand colors.
 
-### 10. Design System Drift Detector
+### 11. Design System Drift Detector
 - **What it does**: A strict diff-checker that compares an implemented screen against the extracted DS guidelines.
 - **When Agent Activates**: After a screen is built, the agent uses MCP to scan the node properties mathematically.
 - **When Designer Should Use**: To catch unauthorized custom HEX codes, rogue pixel values, and detached instances before they enter the codebase.
 - **Pro Tip**: This agent does not use inference. If it flags something as `[GROUNDED]`, it means the absolute mathematical value is wrong.
+
+### 12. Creative Frontend Coder
+- **What it does**: Translates structural blueprints into production-ready frontend code (React, HTML/CSS).
+- **When Agent Activates**: When it's time to build the actual UI. It checks for a Design System. If one exists, it strictly obeys it. If not, it activates its "Anti-Slop Manifesto".
+- **When Designer Should Use**: Use this when you are tired of generating boring cookie-cutter UIs. Let this skill loose on a structural blueprint to generate bold, highly opinionated code with wild typography and CSS motion.
+- **Pro Tip**: If you want extreme creativity, make sure you DO NOT pass a `ui_spec_guideline` to it. If you do, it will lock down into robotic compliance mode.
 
 ---
 
@@ -125,4 +131,4 @@ This guide provides a comprehensive breakdown of the 14 skills in the v2.0 Anti-
 ---
 
 ## The Hand-Off Process
-To ensure seamless transitions across these 14 skills, all agents employ standard `skill_handoff_schema.json` payloads. This guarantees that `[GROUNDED]` context from Problem Framing successfully makes it all the way to the Handoff Quality Checker without being lost to AI forgetfulness or hallucination.
+To ensure seamless transitions across these 15 skills, all agents employ standard `skill_handoff_schema.json` payloads. This guarantees that `[GROUNDED]` context from Problem Framing successfully makes it all the way to the Handoff Quality Checker without being lost to AI forgetfulness or hallucination.

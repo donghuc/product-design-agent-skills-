@@ -1,0 +1,8 @@
+{
+  "skill": "creative_frontend_coder",
+  "inputs": {
+    "architect_blueprint": "A simple 3-step checkout flow. Needs loading, empty cart, and success states.",
+    "ui_spec_guideline": null,
+    "aesthetic_prompt": "We want something editorial, luxurious, and unexpected. No boring SaaS grids."
+  }
+}

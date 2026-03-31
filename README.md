@@ -1,13 +1,13 @@
-# Product Design Agent Skills
+# Product Design Agent Skills (Anti-Hallucination Suite)
 A collection of specialized AI Agent skills designed to support, evaluate, and govern the modern **Product Design Cycle**. These skills turn generic LLMs into domain experts for UX research, UI architecture, and strategic governance.
 
-📚 **[Read the Detailed Library Walkthrough](./docs/walkthrough.md)** - A complete guide on how and when to use each of the 13 skills in your daily design process.
+📚 **[Read the Detailed Library Walkthrough](./docs/walkthrough.md)** - A complete guide on how and when to use each of the 15 skills in your daily design process.
 
 ---
 
-## 🔄 The 5-Phase Product Design Cycle (14 Skills)
+## 🔄 The 5-Phase Product Design Cycle (15 Skills)
 
-Our skills are structured to follow a rigorous design workflow, ensuring that strategy and user-centric logic drive every visual decision. **v2.0** introduces strict Anti-Hallucination rules, Source Citations, and Confidence Tagging across the entire suite.
+Our skills are structured to follow a rigorous design workflow, ensuring that strategy and user-centric logic drive every visual decision. Our suite introduces strict Anti-Hallucination rules, Source Citations, and Confidence Tagging across the entire suite.
 
 ### Level 0: Global Orchestration
 **Role**: Project Manager / Meta-Agent
@@ -29,11 +29,12 @@ Our skills are structured to follow a rigorous design workflow, ensuring that st
 - **[UI Design Architect](./skills/ui_design_architect)**: Fast-maps screens and mandatory interaction states in *Prototyping Mode*.
 - **[Content & Copy Strategist](./skills/content_copy_strategist)**: 🆕 Generates and validates all UI copy against brand voice constraints, preventing "Lorem Ipsum" leaks.
 
-### Phase 4: Design System Application
-**Role**: Design Ops / UI Designer
+### Phase 4: Design System Application (and Execution)
+**Role**: Design Ops / UI Designer / Creative Technologist
 - **[Design System Spec Writer](./skills/design_system_spec_writer)**: Parses raw Figma files via MCP to generate machine-readable UI Guidelines. Includes deprecation tracking.
 - **[UI Design Architect](./skills/ui_design_architect)**: Applied in *Spec-Compliant Mode* to skin layouts with 100% adherence to Design System tokens.
-- **[Design System Drift Detector](./skills/design_system_drift_detector)**: 🆕 Strict deterministic diff checker that catches unauthorized overrides and custom tokens.
+- **[Design System Drift Detector](./skills/design_system_drift_detector)**: Strict deterministic diff checker that catches unauthorized overrides and custom tokens.
+- **[Creative Frontend Coder](./skills/creative_frontend_coder)**: 🆕 Translates structural blueprints into production-grade frontend code (React, HTML/CSS). Strictly complies with DS tokens, or uses an "Anti-Slop" creative manifesto if no DS exists.
 
 ### Phase 5: Validation & Review
 **Role**: Design Director / Auditor / QA Lead
@@ -46,7 +47,7 @@ Our skills are structured to follow a rigorous design workflow, ensuring that st
 
 ## 🛡️ The Anti-Hallucination Framework
 
-All v2.0 skills operate under strict guardrails to prevent AI "confident nonsense":
+All skills operate under strict guardrails to prevent AI "confident nonsense":
 1. **Confidence Tagging**: Every output is labeled `[GROUNDED]`, `[INFERRED]`, or `[SPECULATIVE]`.
 2. **"I Don't Know" Permission**: Agents are explicitly forbidden from filling information gaps with guesses.
 3. **Source Citations**: Auditors must cite specific WCAG/Nielsen criteria.
