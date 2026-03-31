@@ -29,7 +29,7 @@ Our skills are structured to follow a rigorous design workflow, ensuring that st
 - **[UI Design Architect](./skills/ui_design_architect)**: Fast-maps screens and mandatory interaction states in *Prototyping Mode*.
 - **[Content & Copy Strategist](./skills/content_copy_strategist)**: 🆕 Generates and validates all UI copy against brand voice constraints, preventing "Lorem Ipsum" leaks.
 
-### Phase 4: Design System Application (and Execution)
+### Phase 4: Production Design & Build
 **Role**: Design Ops / UI Designer / Creative Technologist
 - **[Design System Spec Writer](./skills/design_system_spec_writer)**: Parses raw Figma files via MCP to generate machine-readable UI Guidelines. Includes deprecation tracking.
 - **[UI Design Architect](./skills/ui_design_architect)**: Applied in *Spec-Compliant Mode* to skin layouts with 100% adherence to Design System tokens.

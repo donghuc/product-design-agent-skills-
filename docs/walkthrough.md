@@ -72,8 +72,8 @@ This guide provides a comprehensive breakdown of the 15 skills in the Anti-Hallu
 
 ---
 
-## Phase 4: Design System Application
-*Goal: Production design and strict adherence to brand tokens.*
+## Phase 4: Production Design & Build
+*Goal: Production design, strict adherence to brand tokens, and frontend code generation.*
 
 ### 8. Design System Spec Writer
 - **What it does**: Parses raw Figma files (via MCP) to extract colors, typography, spacing, and component definitions into a machine-readable artifact.
