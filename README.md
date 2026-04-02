@@ -54,6 +54,9 @@ All skills operate under strict guardrails to prevent AI "confident nonsense":
 4. **Human Checkpoints**: Mandatory pauses at critical decision points to ensure human-in-the-loop governance.
 5. **Standard Handoff Schema**: Context loss is minimized by using `skill_handoff_schema.json` between steps.
 
+## ⌨️ Integrated Slash Commands
+Every skill now possesses predefined `/slash` triggers to drastically speed up your workflow (e.g., typing `/audit` will skip pleasantries and immediately execute a 40-point heuristic sweep). Each skill's `SKILL.md` lists its specific available shortcuts.
+
 ---
 
 ## 🔑 Figma & MCP Dependencies

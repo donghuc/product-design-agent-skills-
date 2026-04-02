@@ -2,6 +2,8 @@
 
 This guide provides a comprehensive breakdown of the 15 skills in the Anti-Hallucination Suite. It is designed to help Product Designers and AI Agents collaborate effectively across the 5-phase Product Design Cycle, ensuring that AI operates safely without generating "confident nonsense".
 
+> **⚡ Pro Tip (Slash Commands):** All 15 skills are equipped with conversational macros (e.g., `/status`, `/prototype`, `/audit`). You do not need to type long instructional prompts once a skill is active. Check each agent's individual `SKILL.md` file to see its complete list of shortcuts!
+
 ---
 
 ## Phase 0: Global Orchestration
