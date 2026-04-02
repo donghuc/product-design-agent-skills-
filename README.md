@@ -64,15 +64,16 @@ All skills operate under strict guardrails to prevent AI "confident nonsense":
 
 ## 🚀 Installation & Usage
 
-Install this collection using **npm** directly from GitHub:
+You don't need to download the entire repository manually. You can use our built-in CLI installer via `npx` to fetch exactly what you need directly into your local `.agents/skills` folder.
 
+**To install a specific skill:**
 ```bash
-npm install git+https://github.com/donghuc/product-design-agent-skills-.git
+npx github:donghuc/product-design-agent-skills- add ui_design_architect
 ```
 
-Copy skills into your agent's local directory:
+**To install all 15 skills at once:**
 ```bash
-cp -r node_modules/@donghuc/product-design-agent-skills/skills/ui_design_architect /path/to/project/.agents/skills/
+npx github:donghuc/product-design-agent-skills- add all
 ```
 
 ## 📄 License

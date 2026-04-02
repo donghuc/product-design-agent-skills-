@@ -6,8 +6,12 @@
     "type": "git",
     "url": "git+https://github.com/donghuc/product-design-agent-skills-.git"
   },
+  "bin": {
+    "design-skills": "./bin/cli.js"
+  },
   "files": [
-    "skills"
+    "skills",
+    "bin"
   ],
   "keywords": [
     "ai",
