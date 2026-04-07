@@ -1,0 +1,11 @@
+{
+  "skill": "ux_metrics_designer",
+  "inputs": {
+    "problem_statement": "Users often abandon the device onboarding flow at the Wi-Fi connection step, leading to high support ticket volume and returns.",
+    "concept_brief": "A new 'Guided Wi-Fi Setup' that proactively tests signal strength and offers visual troubleshooting steps instead of a generic failure message.",
+    "assumptions": [
+      "Users have their Wi-Fi password readily available.",
+      "The issue is due to unclear error states, not actual hardware failures."
+    ]
+  }
+}

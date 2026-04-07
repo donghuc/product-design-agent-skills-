@@ -1,8 +1,8 @@
 # Product Design Agent Skills: Detailed Walkthrough
 
-This guide provides a comprehensive breakdown of the 15 skills in the Anti-Hallucination Suite. It is designed to help Product Designers and AI Agents collaborate effectively across the 5-phase Product Design Cycle, ensuring that AI operates safely without generating "confident nonsense".
+This guide provides a comprehensive breakdown of the 16 skills in the Anti-Hallucination Suite. It is designed to help Product Designers and AI Agents collaborate effectively across the 5-phase Product Design Cycle, ensuring that AI operates safely without generating "confident nonsense".
 
-> **⚡ Pro Tip (Slash Commands):** All 15 skills are equipped with conversational macros (e.g., `/status`, `/prototype`, `/audit`). You do not need to type long instructional prompts once a skill is active. Check each agent's individual `SKILL.md` file to see its complete list of shortcuts!
+> **⚡ Pro Tip (Slash Commands):** All 16 skills are equipped with conversational macros (e.g., `/status`, `/prototype`, `/audit`). You do not need to type long instructional prompts once a skill is active. Check each agent's individual `SKILL.md` file to see its complete list of shortcuts!
 
 ---
 
@@ -48,6 +48,12 @@ This guide provides a comprehensive breakdown of the 15 skills in the Anti-Hallu
 - **When Agent Activates**: When embarking on a highly complex or standardized flow (e.g., checkout, onboarding) where reinventing the wheel is dangerous.
 - **When Designer Should Use**: When you need to justify an interaction model to stakeholders using established industry patterns.
 - **Pro Tip**: Pair this skill with Concept Exploration to ensure the AI's generated concepts are anchored in verifiable real-world products.
+
+### 5. UX Metrics Designer
+- **What it does**: Defines clear, behavior-driven UX metrics for a feature or flow based on the HEART framework.
+- **When Agent Activates**: When moving from concept exploration to structural experience design, ensuring metrics reflect real user success.
+- **When Designer Should Use**: Use before any UI is drawn or validation is structured to ensure that design decisions are tied to measurable behavior instead of vanity metrics.
+- **Pro Tip**: Make sure to define both leading and lagging metrics alongside specific "Anti-metrics" to actively avoid.
 
 ---
 
@@ -133,4 +139,4 @@ This guide provides a comprehensive breakdown of the 15 skills in the Anti-Hallu
 ---
 
 ## The Hand-Off Process
-To ensure seamless transitions across these 15 skills, all agents employ standard `skill_handoff_schema.json` payloads. This guarantees that `[GROUNDED]` context from Problem Framing successfully makes it all the way to the Handoff Quality Checker without being lost to AI forgetfulness or hallucination.
+To ensure seamless transitions across these 16 skills, all agents employ standard `skill_handoff_schema.json` payloads. This guarantees that `[GROUNDED]` context from Problem Framing successfully makes it all the way to the Handoff Quality Checker without being lost to AI forgetfulness or hallucination.

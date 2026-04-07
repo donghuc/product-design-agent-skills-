@@ -1,11 +1,11 @@
 # Product Design Agent Skills (Anti-Hallucination Suite)
 A collection of specialized AI Agent skills designed to support, evaluate, and govern the modern **Product Design Cycle**. These skills turn generic LLMs into domain experts for UX research, UI architecture, and strategic governance.
 
-📚 **[Read the Detailed Library Walkthrough](./docs/walkthrough.md)** - A complete guide on how and when to use each of the 15 skills in your daily design process.
+📚 **[Read the Detailed Library Walkthrough](./docs/walkthrough.md)** - A complete guide on how and when to use each of the 16 skills in your daily design process.
 
 ---
 
-## 🔄 The 5-Phase Product Design Cycle (15 Skills)
+## 🔄 The 5-Phase Product Design Cycle (16 Skills)
 
 Our skills are structured to follow a rigorous design workflow, ensuring that strategy and user-centric logic drive every visual decision. Our suite introduces strict Anti-Hallucination rules, Source Citations, and Confidence Tagging across the entire suite.
 
@@ -22,6 +22,7 @@ Our skills are structured to follow a rigorous design workflow, ensuring that st
 **Role**: Product Designer / UX Strategist
 - **[Concept Exploration Orchestrator](./skills/concept_exploration_orchestrator)**: Explores distinct interaction concepts and evaluates tradeoffs based on real-world reference constraints.
 - **[Reference & Benchmark Collector](./skills/reference_benchmark_collector)**: 🆕 Searches for and organizes verifiable, real-world precedent designs so designers don't reinvent the wheel.
+- **[UX Metrics Designer](./skills/ux_metrics_designer)**: 🆕 Defines clear, behavior-driven UX metrics for a feature or flow based on the HEART framework.
 
 ### Phase 3: Rapid Prototyping
 **Role**: Interaction Designer / PM / UX Architect / UX Writer
@@ -74,7 +75,7 @@ You don't need to download the entire repository manually. You can use our built
 npx github:donghuc/product-design-agent-skills- add ui_design_architect
 ```
 
-**To install all 15 skills at once:**
+**To install all 16 skills at once:**
 ```bash
 npx github:donghuc/product-design-agent-skills- add all
 ```
